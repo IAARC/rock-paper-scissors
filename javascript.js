@@ -21,7 +21,7 @@ function playRound (playerSelection, computeSelection) {
      } else if (playerSelection.toLowerCase() == "scissors" && computeSelection.toLowerCase() == "paper") {
         winsOfPlayer++
          return textOfWin;
-     } else if (playerSelection === computeSelection) { 
+     } else if (playerSelection.toLowerCase() === computeSelection.toLowerCase()) { 
         return textOfDraw;
      } else {
          winsOfComputer++
@@ -45,7 +45,6 @@ if (winsOfPlayer === 3 ) {
 } else {
     playRound();
     console.log(score())
-    
 }
     
 }
